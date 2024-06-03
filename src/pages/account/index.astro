@@ -1,0 +1,43 @@
+---
+import BaseLayout from '@layouts/Base.astro';
+import Nav from '@/components/scafold/Nav.astro';
+
+---
+
+<BaseLayout>
+  <main>
+    <Nav />
+  </main>
+</BaseLayout>
+
+<style lang="scss">
+  main {
+    height: 100vh;
+    padding: 1rem 0;
+    background: rgb(20,29,43);
+    background: radial-gradient(circle,#141d2b 0%,#0d1521 75%,#141d2b 100%);
+    h2 {
+      font-weight: 300;
+    }
+
+    .screenshot {
+      transform:
+        rotate3d(.5,-.866,0,15deg)
+        rotate(1deg);
+      box-shadow:
+        2em 4em 6em -2em rgba(0,0,0,.5),
+        1em 2em 3.5em -2.5em rgba(0,0,0,.5);
+      transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+      border-radius: .5em;
+
+      &:hover {
+        transform:
+          rotate3d(0,0,0,0deg)
+          rotate(0deg);
+      }
+    }
+  }
+
+</style>
